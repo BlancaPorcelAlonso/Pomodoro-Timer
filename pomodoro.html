@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pomodoro.css" />
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <section id="contenedor">
+        <article class="panel">
+
+            <div class="btns_esquina">
+                <button class="btn" id="settingsBtn" type="button"><img src="ajustes.png" alt="Ajustes"></button>
+                <button class="btn" type="button"><img src="musica.png" alt="Música"></button>
+            </div>
+
+            <div id="reloj">
+                <div class="time" id="minutes">25</div>
+                <div class="colon">:</div>
+                <div class="time" id="seconds">00</div>
+            </div>
+
+            <div id="start">
+                <button class="btn_start" type="button">Start</button>
+            </div>
+
+            <<div class="btns_abajo">
+                <button class="btn" id="pauseBtn" type="button">
+                    <img src="Untitled design (4).png" alt="Pausa">
+                </button>
+
+                <button class="btn" id="resetBtn" type="button">
+                    <img src="Untitled design (5).png" alt="Reset">
+                </button>
+                </div>
+
+        </article>
+
+
+        <div id="settingsModal" class="settings">
+            <div class="settings-content">
+                <h2>Settings</h2>
+
+                <div class="setting-group">
+                    <label for="workTime">Work Time (minutes)</label>
+                    <input type="number" id="workTime" min="1" max="60" value="25">
+                </div>
+
+                <div class="setting-group">
+                    <label for="breakTime">Break Time (minutes)</label>
+                    <input type="number" id="breakTime" min="1" max="30" value="5">
+                </div>
+
+                <div class="settings-buttons">
+                    <button class="save-btn" id="saveBtn" type="button">Save</button>
+                    <button class="cancel-btn" id="cancelBtn" type="button">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="pomodoro.js"></script>
+</body>
+
+</html>
