@@ -6,8 +6,6 @@
 body{
   margin: 0;
   font-family: "RobotoMono", sans-serif;
-}
-body {
     background-image: url(fondo.jpg);
     background-repeat: no-repeat;
     /* Evita que la imagen se repita */
@@ -44,8 +42,11 @@ article {
 }
 
 
-.btn img {
+.btns_esquina .btn img {
     height: 80px;
+}
+.btns_abajo .btn img {
+    height: 50px;
 }
 
 .btn {
@@ -86,6 +87,7 @@ article {
 .btns_abajo {
     text-align: center;
     grid-area: 4 / 2 / 5 / 3;
+    margin-bottom: 45px;
 }
 
 .btn:hover {
@@ -103,7 +105,7 @@ article {
 }
 
 .btns_abajo .btn {
-    margin: 15px;
+    margin: 5px;
 }
 
 

@@ -18,6 +18,9 @@ const workTimeInput = document.getElementById("workTime");
 const breakTimeInput = document.getElementById("breakTime");
 const watcher = document.getElementById('watcher');
 
+const musicButton = document.getElementById("musicBtn");
+const audio = document.getElementById("myAudio");
+
 // Valores por defecto
 let workMinutes = 25;   // <-- FALTABA
 let breakMinutes = 5;   // <-- FALTABA
@@ -98,6 +101,7 @@ function resetTimer() {
   totalTime = (isWorkTime ? workMinutes : breakMinutes) * 60;
   updateDisplay();
 }
+
 function completeSession() {
     clearInterval(timerInterval);
     isRunning = false;
@@ -127,13 +131,23 @@ function completeSession() {
     }
 }
 
+function optionAudio(){
+     if (audio.paused) {
+      audio.play();                   
+      btn.setAttribute("aria-label", "Pausar audio");
+    } else {
+      audio.pause();
+      btn.setAttribute("aria-label", "Reproducir audio");
+    }
+}
+
 // 5) Al cargar, pinta el tiempo inicial
 updateDisplay();
 
-// 6) Click en Start
 startButton.addEventListener("click", startTimer);
 settingsBtn.addEventListener("click", openSettings);
 saveBtn.addEventListener("click", saveSettings);
 cancelBtn.addEventListener("click", closeSettings);
 pauseBtn.addEventListener("click", pauseTimer);
 resetBtn.addEventListener("click", resetTimer);
+musicButton.addEventListener("click", optionAudio);
