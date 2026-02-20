@@ -1,4 +1,5 @@
-🌿 Pomodoro Focus Timer
+#🌿 Pomodoro Focus Timer
+
 
 Aplicación web -Pomodoro Timer- desarrollada con HTML, CSS y JavaScript.
 Permite gestionar sesiones de trabajo y descanso con una interfaz limpia y visual.
