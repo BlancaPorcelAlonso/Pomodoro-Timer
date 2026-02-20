@@ -1,4 +1,4 @@
-#🌿 Pomodoro Focus Timer
+# 🌿 Pomodoro Focus Timer
 
 
 Aplicación web -Pomodoro Timer- desarrollada con HTML, CSS y JavaScript.
