@@ -20,6 +20,7 @@ const watcher = document.getElementById('watcher');
 
 const musicButton = document.getElementById("musicBtn");
 const audio = document.getElementById("myAudio");
+const motivationDisplay = document.getElementById("motivationDisplay");
 
 // Valores por defecto
 let workMinutes = 25;   // <-- FALTABA
@@ -31,7 +32,13 @@ let isRunning = false;
 let timerInterval = null;
 let isWorkTime = true; // true = trabajo, false = descanso
 
-
+function updateMotivation() {
+    if (isWorkTime) {
+        motivationDisplay.textContent = "Deep focus mode. Build your future.";
+    } else {
+        motivationDisplay.textContent = "Relax. Your mind deserves this pause.";
+    }
+}
 function updateDisplay() {
     const minutes = Math.floor(totalTime / 60); // minutos enteros
     const seconds = totalTime % 60;             // resto de segundos
@@ -64,6 +71,7 @@ function startTimer() {
                 }
 
                 updateDisplay(); // pinta el nuevo tiempo en pantalla
+                updateMotivation();
             }
         }, 1000); // cada 1000ms = 1 segundo
     }
@@ -100,6 +108,7 @@ function resetTimer() {
 
   totalTime = (isWorkTime ? workMinutes : breakMinutes) * 60;
   updateDisplay();
+  updateMotivation();
 }
 
 function completeSession() {
@@ -143,6 +152,7 @@ function optionAudio(){
 
 // 5) Al cargar, pinta el tiempo inicial
 updateDisplay();
+updateMotivation();
 
 startButton.addEventListener("click", startTimer);
 settingsBtn.addEventListener("click", openSettings);
