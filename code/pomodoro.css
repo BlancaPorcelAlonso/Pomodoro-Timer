@@ -30,8 +30,8 @@ body {
 article {
     grid-area: 2 / 2 / 6 / 6;
     background-color: #003505b7;
-    height: 430px;
-    width: 850px;
+     width: min(850px, 92vw);  /* máximo 850, pero se adapta */
+    aspect-ratio: 850 / 430;  /* mantiene exactamente la proporción */
     border-radius: 30px;
     /* Redondea las 4 esquinas */
 
@@ -240,7 +240,7 @@ article {
 }
 
 
-@media (max-width: 415px) {
+@media (max-width: 750px) {
     #contenedor {
         display: flex;
         justify-content: center;
@@ -252,7 +252,7 @@ article {
     article {
         width: 100%;
         max-width: 380px;
-        height: 100%;
+        aspect-ratio: 850 / 430;  /* mantiene forma */
         border-radius: 15px;
         display: flex !important;
         flex-direction: column;
