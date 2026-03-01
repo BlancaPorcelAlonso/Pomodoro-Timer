@@ -283,3 +283,10 @@ article {
     }
 
 }
+
+body{
+  background-attachment: scroll;
+}
+@media (max-width: 750px){
+  body{ background-attachment: scroll; }
+}
